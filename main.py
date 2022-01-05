@@ -26,7 +26,7 @@ app = Client("JayBee", bot_token=bot_token, api_id=api, api_hash=hash, workers=w
 
 @app.on_message(filters.command('start'))
 def start(client, message):
-    kb = [[InlineKeyboardButton('𝗡𝗘𝗪 𝗬𝗢𝗥𝗞 ✈', url=chnnl),InlineKeyboardButton('𝗕𝘆', url="tg://openmessage?user_id=1400053702")]]
+    kb = [[InlineKeyboardButton('𝗡𝗘𝗪 𝗬𝗢𝗥𝗞 ✈'('𝗕𝘆'
     reply_markup = InlineKeyboardMarkup(kb)
     app.send_message(chat_id=message.from_user.id, text=f"𝗛𝗲𝗹𝗹𝗼 𝘁𝗵𝗲𝗿𝗲, 𝗜 𝗮𝗺 **𝗧𝗶𝗸𝗧𝗼𝗸 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗿 𝗕𝗼𝘁**\n𝗜 𝗰𝗮𝗻 𝗱𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝗧𝗶𝗸𝗧𝗼𝗸 𝘃𝗶𝗱𝗲𝗼 𝘄𝗶𝘁𝗵𝗼𝘂𝘁 𝗪𝗮𝘁𝗲𝗿𝗺𝗮𝗿𝗸\n"
                           "__**𝗕𝘆 :**__ __@us6a02__\n"
@@ -38,7 +38,7 @@ def start(client, message):
 
 @app.on_message(filters.command('help'))
 def help(client, message):
-    kb = [[InlineKeyboardButton('𝗡𝗘𝗪 𝗬𝗢𝗥𝗞 ✈', url=chnnl),InlineKeyboardButton('𝗕𝘆', url="tg://openmessage?user_id=1400053702")]]
+    kb = [[InlineKeyboardButton('𝗡𝗘𝗪 𝗬𝗢𝗥𝗞 ✈'
     reply_markup = InlineKeyboardMarkup(kb)
     app.send_message(chat_id=message.from_user.id, text=f"𝗛𝗲𝗹𝗹𝗼 𝘁𝗵𝗲𝗿𝗲, 𝗜 𝗮𝗺 **𝗧𝗶𝗸𝗧𝗼𝗸 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗿 𝗕𝗼𝘁**.\n𝗜 𝗰𝗮𝗻 𝗱𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝗮𝗻𝘆 𝗧𝗶𝗸𝗧𝗼𝗸 𝘃𝗶𝗱𝗲𝗼 𝗳𝗿𝗼𝗺 𝗮 𝗴𝗶𝘃𝗲𝗻 𝗹𝗶𝗻𝗸\n"
                                             "__𝗦𝗲𝗻𝗱 𝗺𝗲 𝗮 𝗧𝗶𝗸𝗧𝗼𝗸 𝘃𝗶𝗱𝗲𝗼 𝗹𝗶𝗻𝗸__🖇️",
@@ -58,7 +58,7 @@ def tiktok_dl(client, message):
 
     
     params = {
-      "link": 𝗹𝗶𝗻𝗸
+      "link": link
     }
     headers = {
       'x-rapidapi-host': "tiktok-info.p.rapidapi.com",
@@ -92,9 +92,9 @@ def tiktok_dl(client, message):
                     percent = 100
                 if show == 1:
                     try:
-                        a.edit(f'__**𝗨𝗥𝗟 :**__ __{message.text}__\n'
-                               f'__**𝗧𝗼𝘁𝗮𝗹 𝗦𝗶𝘇𝗲 :**__ __{total_size} 𝗠𝗕__\n'
-                               f'__**𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗱 :**__ __{percent}%__\n',
+                        a.edit(f'__**URL :**__ __{message.text}__\n'
+                               f'__**Total Size :**__ __{total_size} MB__\n'
+                               f'__**Downloaded :**__ __{percent}%__\n',
                                disable_web_preview=False)
                     except:
                         pass
@@ -107,9 +107,9 @@ def tiktok_dl(client, message):
         title = filename
         app.send_document(chat_id=message.chat.id,
                           document=f"./{directory}/{filename}",
-                          caption=f"**𝗙𝗶𝗹𝗲 :** __{filename}__\n"
-                          f"**𝗦𝗶𝘇𝗲 :** __{total_size} 𝗠𝗕__\n\n"
-                          f"__𝗨𝗽𝗹𝗼𝗮𝗱𝗲𝗱 𝗯𝘆 @{BOT_URL}__",
+                          caption=f"**File :** __{filename}__\n"
+                          f"**Size :** __{total_size} MB__\n\n"
+                          f"__Uploaded by @{BOT_URL}__",
                           file_name=f"{directory}",
                           parse_mode='md',
                           progress=progress,
