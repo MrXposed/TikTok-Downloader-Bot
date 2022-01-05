@@ -26,12 +26,10 @@ app = Client("JayBee", bot_token=bot_token, api_id=api, api_hash=hash, workers=w
 
 @app.on_message(filters.command('start'))
 def start(client, message):
-    kb = [[InlineKeyboardButton('Channel 🛡', url=chnnl),InlineKeyboardButton('Repo 🔰', url="https://github.com/Bottom-T/TikTok-Downloader-Bot/")]]
+    kb = [[InlineKeyboardButton('𝗡𝗘𝗪 𝗬𝗢𝗥𝗞 ✈', url=chnnl),InlineKeyboardButton('𝗕𝘆', url="tg://openmessage?user_id=1400053702")]]
     reply_markup = InlineKeyboardMarkup(kb)
-    app.send_message(chat_id=message.from_user.id, text=f"Hello there, I am **TikTok Downloader Bot**.\nI can download TikTok video without Watermark.\n\n"
-                          "__**Developer :**__ __@us6a02__\n"
-                          "__**Language :**__ __Python__\n"
-                          "__**Framework :**__ __🔥 Pyrogram__",
+    app.send_message(chat_id=message.from_user.id, text=f"𝗛𝗲𝗹𝗹𝗼 𝘁𝗵𝗲𝗿𝗲, 𝗜 𝗮𝗺 **𝗧𝗶𝗸𝗧𝗼𝗸 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗿 𝗕𝗼𝘁**\n𝗜 𝗰𝗮𝗻 𝗱𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝗧𝗶𝗸𝗧𝗼𝗸 𝘃𝗶𝗱𝗲𝗼 𝘄𝗶𝘁𝗵𝗼𝘂𝘁 𝗪𝗮𝘁𝗲𝗿𝗺𝗮𝗿𝗸\n"
+                          "__**𝗕𝘆 :**__ __@us6a02__\n"
                      parse_mode='md',
                      reply_markup=reply_markup)
 
@@ -40,10 +38,10 @@ def start(client, message):
 
 @app.on_message(filters.command('help'))
 def help(client, message):
-    kb = [[InlineKeyboardButton('Channel 🛡', url=chnnl),InlineKeyboardButton('Repo 🔰', url="https://github.com/Bottom-T/TikTok-Downloader-Bot/")]]
+    kb = [[InlineKeyboardButton('𝗡𝗘𝗪 𝗬𝗢𝗥𝗞 ✈', url=chnnl),InlineKeyboardButton('𝗕𝘆', url="tg://openmessage?user_id=1400053702")]]
     reply_markup = InlineKeyboardMarkup(kb)
-    app.send_message(chat_id=message.from_user.id, text=f"Hello there, I am **TikTok Downloader Bot**.\nI can download any TikTok video from a given link.\n\n"
-                                            "__Send me a TikTok video link__",
+    app.send_message(chat_id=message.from_user.id, text=f"𝗛𝗲𝗹𝗹𝗼 𝘁𝗵𝗲𝗿𝗲, 𝗜 𝗮𝗺 **𝗧𝗶𝗸𝗧𝗼𝗸 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗿 𝗕𝗼𝘁**.\n𝗜 𝗰𝗮𝗻 𝗱𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝗮𝗻𝘆 𝗧𝗶𝗸𝗧𝗼𝗸 𝘃𝗶𝗱𝗲𝗼 𝗳𝗿𝗼𝗺 𝗮 𝗴𝗶𝘃𝗲𝗻 𝗹𝗶𝗻𝗸\n"
+                                            "__𝗦𝗲𝗻𝗱 𝗺𝗲 𝗮 𝗧𝗶𝗸𝗧𝗼𝗸 𝘃𝗶𝗱𝗲𝗼 𝗹𝗶𝗻𝗸__🖇️",
                      parse_mode='md',
                      reply_markup=reply_markup)
 
@@ -51,7 +49,7 @@ def help(client, message):
 @app.on_message((filters.regex("http://")|filters.regex("https://")) & (filters.regex('tiktok')|filters.regex('douyin')))
 def tiktok_dl(client, message):
     a = app.send_message(chat_id=message.chat.id,
-                         text='__Downloading File to the Server__',
+                         text='__𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗶𝗻𝗴 𝗙𝗶𝗹𝗲 𝘁𝗼 𝘁𝗵𝗲 𝗦𝗲𝗿𝘃𝗲𝗿__🥁',
                          parse_mode='md')
     link = re.findall(r'\bhttps?://.*[(tiktok|douyin)]\S+', message.text)[0]
     link = link.split("?")[0]
@@ -60,7 +58,7 @@ def tiktok_dl(client, message):
 
     
     params = {
-      "link": link
+      "link": 𝗹𝗶𝗻𝗸
     }
     headers = {
       'x-rapidapi-host': "tiktok-info.p.rapidapi.com",
@@ -94,24 +92,24 @@ def tiktok_dl(client, message):
                     percent = 100
                 if show == 1:
                     try:
-                        a.edit(f'__**URL :**__ __{message.text}__\n'
-                               f'__**Total Size :**__ __{total_size} MB__\n'
-                               f'__**Downloaded :**__ __{percent}%__\n',
+                        a.edit(f'__**𝗨𝗥𝗟 :**__ __{message.text}__\n'
+                               f'__**𝗧𝗼𝘁𝗮𝗹 𝗦𝗶𝘇𝗲 :**__ __{total_size} 𝗠𝗕__\n'
+                               f'__**𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗱 :**__ __{percent}%__\n',
                                disable_web_preview=False)
                     except:
                         pass
                     if percent == 100:
                         show = 0
 
-        a.edit(f'__Downloaded to the server!\n'
-               f'Uploading to Telegram Now ⏳__')
+        a.edit(f'__𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗱 𝘁𝗼 𝘁𝗵𝗲 𝘀𝗲𝗿𝘃𝗲𝗿__♻️\n'
+               f'𝗨𝗽𝗹𝗼𝗮𝗱𝗶𝗻𝗴 𝘁𝗼 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗡𝗼𝘄 ⏳__')
         start = time.time()
         title = filename
         app.send_document(chat_id=message.chat.id,
                           document=f"./{directory}/{filename}",
-                          caption=f"**File :** __{filename}__\n"
-                          f"**Size :** __{total_size} MB__\n\n"
-                          f"__Uploaded by @{BOT_URL}__",
+                          caption=f"**𝗙𝗶𝗹𝗲 :** __{filename}__\n"
+                          f"**𝗦𝗶𝘇𝗲 :** __{total_size} 𝗠𝗕__\n\n"
+                          f"__𝗨𝗽𝗹𝗼𝗮𝗱𝗲𝗱 𝗯𝘆 @{BOT_URL}__",
                           file_name=f"{directory}",
                           parse_mode='md',
                           progress=progress,
