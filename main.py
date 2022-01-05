@@ -27,7 +27,7 @@ app = Client("JayBee", bot_token=bot_token, api_id=api, api_hash=hash, workers=w
 
 @app.on_message(filters.command('start'))
 def start(client, message):
-    kb = [[InlineKeyboardButton('𝗡𝗘𝗪 𝗬𝗢𝗥𝗞 ✈', url=chnnl),InlineKeyboardButton('by 🔰', url="tg://openmessage?user_id=2146813672")]]
+    kb = [[InlineKeyboardButton('𝗡𝗘𝗪 𝗬𝗢𝗥𝗞 ✈',
     reply_markup = InlineKeyboardMarkup(kb)
     app.send_message(chat_id=message.from_user.id, text=f"Hello there, I am **TikTok Downloader Bot**.\nI can download TikTok video without Watermark.\n\n"
                           "__**by :**__ __@us6a02__\n"
@@ -39,7 +39,7 @@ def start(client, message):
 
 @app.on_message(filters.command('help'))
 def help(client, message):
-    kb = [[InlineKeyboardButton('𝗡𝗘𝗪 𝗬𝗢𝗥𝗞 ✈', url=chnnl),InlineKeyboardButton('by 🔰', url="tg://openmessage?user_id=2146813672")]]
+    kb = [[InlineKeyboardButton('𝗡𝗘𝗪 𝗬𝗢𝗥𝗞 ✈',
     reply_markup = InlineKeyboardMarkup(kb)
     app.send_message(chat_id=message.from_user.id, text=f"Hello there, I am **TikTok Downloader Bot**.\nI can download any TikTok video from a given link.\n\n"
                                             "__Send me a TikTok video link__",
