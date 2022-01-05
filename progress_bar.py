@@ -16,12 +16,12 @@ async def progress(current,total,a,start, title):
         elapsed_time = TimeFormatter(milliseconds=elapsed_time)
         estimated_total_time = TimeFormatter(milliseconds=estimated_total_time)
 
-        progress = "__**Progress :**__ `[{0}{1}] {2}%`\n".format(
+        progress = "__**𝗣𝗿𝗼𝗴𝗿𝗲𝘀𝘀 :**__ `[{0}{1}] {2}%`\n".format(
             ''.join(["●" for i in range(math.floor(percentage / 5))]),
             ''.join([" " for i in range(20 - math.floor(percentage / 5))]),
             round(percentage, 2))
 
-        tmp = progress + "__**Uploaded :**__ {0} of {1}\n__**Speed :**__ {2}/s\n__**ETA :**__ {3}\n".format(
+        tmp = progress + "__**𝗨𝗽𝗹𝗼𝗮𝗱𝗲𝗱 :**__ {0} of {1}\n__**𝗦𝗽𝗲𝗲𝗱 :**__ {2}/s\n__**ETA :**__ {3}\n".format(
             humanbytes(current),
             humanbytes(total),
             humanbytes(speed),
