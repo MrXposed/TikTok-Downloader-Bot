@@ -21,7 +21,7 @@ async def progress(current,total,a,start, title):
             ''.join([" " for i in range(20 - math.floor(percentage / 5))]),
             round(percentage, 2))
 
-        tmp = progress + "__**𝗨𝗽𝗹𝗼𝗮𝗱𝗲𝗱 :**__ {0} of {1}\n__**𝗦𝗽𝗲𝗲𝗱 :**__ {2}/s\n__**ETA :**__ {3}\n".format(
+        tmp = progress + "__**𝗨𝗽𝗹𝗼𝗮𝗱𝗲𝗱 :**__ {0} of {1}\n__**𝗦𝗽𝗲𝗲𝗱 :**__ {2}/s\n__**𝗘𝗧𝗔 :**__ {3}\n".format(
             humanbytes(current),
             humanbytes(total),
             humanbytes(speed),
