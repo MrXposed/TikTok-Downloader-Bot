@@ -16,8 +16,8 @@
       "description": "Your bot Bot Token, get this value from @BotFather.",
       "value": ""
     },
-    "API_ID": {
-      "description": "Your APl ID, get this from https://my.telegram.org",
+    "API_KEY": {
+      "description": "Your API_KEY, get this from https://my.telegram.org",
       "value": ""
     },
     "API_HASH": {
